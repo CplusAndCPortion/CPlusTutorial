@@ -23,10 +23,29 @@ void basic_definition();
  */
 void basic_name_struct();
 
+void combination_condition();
+
 int main() {
     // basic_definition();
-    basic_name_struct();
+    // basic_name_struct();
+    combination_condition();
     return 0;
+}
+
+struct Combination{
+    string prefix;
+    string suffix;
+};
+
+void generateCombinations() {
+    
+}
+
+
+
+void combination_condition() {
+    
+    
 }
 
 void basic_name_struct() {
