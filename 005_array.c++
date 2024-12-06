@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -31,7 +29,7 @@ void omit_array_size();
 /**
  * change array via vector lib.
  */
-// void basic_vector_array();
+void basic_vector_array();
 
 void get_array_size();
 
@@ -47,8 +45,8 @@ int main() {
     // loop_array();
     // omit_array_size();
     // basic_vector_array();
-    // get_array_size();
-    multi_dimensional_array();
+    get_array_size();
+    // multi_dimensional_array();
     return 0;
 }
 
@@ -67,7 +65,9 @@ void multi_dimensional_array() {
 }
 
 void get_array_size() {
-    string cars[] = {"Volvo", "BMW", "Ford"};
+    string cars[] = {"Volvojkklalkdfssdfds", "BMW", "Ford"};
+    cout << sizeof(string) << "\n";  // string may occupy 24 bytes in c++, it actually is a class.
+
     cout << sizeof(cars) << "\n";
     cout << sizeof(cars[0]) << "\n";
     cout << sizeof(cars[1]) << "\n";
@@ -77,17 +77,24 @@ void get_array_size() {
     cout << "num_count == " << num_count << "\n";
 }
 
-// void basic_vector_array() {
-//     // A vector with 3 elements
-//     vector<string> cars = {"Volvo", "BMW", "Ford"};
+void basic_vector_array() {
+    // A vector with 3 elements
+    // Waring: Can not find the reason that initialize the `vector<string> cars` success, using assignment directly.
+    // vector<string> cars = {"Volvo", "BMW", "Ford"};
 
-//     // Adding another element to the vector
-//     cars.push_back("Tesla");
-//     for (string ele : cars)
-//     {
-//         cout << ele << ";";
-//     }
-// }
+
+    vector<string> cars;
+    cars.push_back("Volvo");
+    cars.push_back("BMW");
+    cars.push_back("Ford");
+
+    // Adding another element to the vector
+    cars.push_back("Tesla");
+    for (string ele : cars)
+    {
+        cout << ele << ";\n";
+    }
+}
 
 void omit_array_size() {
     string cars[] = {"Volvo", "BMW", "Ford"}; // Three array elements
@@ -98,7 +105,11 @@ void omit_array_size() {
 }
 
 void loop_array() {
-    string name[3] = {"xiao","ling","dai"};
+    
+    cout << "------begin------\n";
+
+    // string name[3] = {"xiao","ling","dai"};
+    string name[] = {"xiao","ling","dai"};
     // type: `for conventional` format
     for (int i = 0; i < 3; i++)
     {
@@ -111,6 +122,8 @@ void loop_array() {
     {
         cout << ele << "\n";
     }
+
+    cout << "------end------\n";
 }
 
 void arrary_definition() {

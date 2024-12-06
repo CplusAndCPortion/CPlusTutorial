@@ -2,7 +2,10 @@
 #include <string>
 using namespace std;
 /**
- * In C++, there has a function overloading that same as swift
+ * In C++, there has a function overloading that same as swift.
+ * NOTE:
+ *  The different of parameters including name, type can result in function overloading.
+ *  Only different of return type can not result in funciton overloading.
  */
 
 int sum(int x, int y);
@@ -60,6 +63,11 @@ int sum(int x) {
 // ------------
 
 int recursive_(int num) {
+
+    // let's check the params address.
+
+    // cout << "inner num address == " << &num << "\n";
+
     if (num > 0){
         return num + recursive_(num - 1);
     } else {

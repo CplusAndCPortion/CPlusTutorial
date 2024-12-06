@@ -50,8 +50,8 @@ void modify_pointers();
 
 int main() {
     // reference_test();
-    execute_reference_test1();
-    // memory_address_test();
+    // execute_reference_test1();
+    memory_address_test();
     // pointer_test();
     // modify_pointers();
     return 0;
@@ -85,7 +85,9 @@ void pointer_test() {
 
 void memory_address_test() {
     string food = "Pizza";
-    cout << &food << "\n"; // 0x7ff7b06467f8
+    string *ptr = &food;
+    cout << &food << "\n"; 
+    cout << ptr << "\n";
 }
 
 void reference_test1_(string &str) {
