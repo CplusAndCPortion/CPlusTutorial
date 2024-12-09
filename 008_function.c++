@@ -5,7 +5,7 @@ using namespace std;
  * In C++, there has a function overloading that same as swift.
  * NOTE:
  *  The different of parameters including name, type can result in function overloading.
- *  Only different of return type can not result in funciton overloading.
+ *  Only different of function return type can not result in funciton overloading.
  */
 
 int sum(int x, int y);

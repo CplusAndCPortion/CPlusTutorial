@@ -6,8 +6,8 @@ using namespace std;
  * In C++, It's possible to inherit attributes and members from one class to another.
  * 
  * Group "Inheritance Concepts" into two categories
- *  - Derived class (child) : 
- *  - Base class
+ *  - Derived class (child) : the class that inherited from other classes.
+ *  - Base class: a blueprint for others subclass to inherit.
  * 
  */
 
@@ -21,7 +21,8 @@ void Vehical::honk() {
     cout << this->brand <<"is Honking \n";
 }
 
-class Car: public Vehical {
+class Car: public Vehical { // Attention: must set `public` prior `Vehical`
+// class Car: Vehical { // If not set 'public', will be cause error when you access the member  of base or super class.
     public:
         string model;
         void honk() {

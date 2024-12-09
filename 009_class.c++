@@ -4,13 +4,14 @@ using namespace std;
 
 class MyClass { // class 
     public: // Access specifier
-
-
         // attributes
         int myNum; 
         string myString;
 
-        // Constructor
+        /**
+         * @brief Construct a new My Class object
+         * The Constructor has the same name as the class name, it's always public, and doesn't have any return value.
+         */
         MyClass() {
             cout << "Each time you initilize an object, will trigger the Constructor Method" << "\n";
         }
@@ -45,6 +46,5 @@ void test_simple_class() {
 
 
     myObj.outFunc();
-
     myObj.myMethod();
 }
