@@ -4,6 +4,7 @@ using namespace std;
 
 void test001();
 void test002();
+void test003(); // 类型转换 - 静态另类转换
 
 int main() {
     // cout << "Hello This is variables";
@@ -19,9 +20,17 @@ int main() {
 
     // test001();
 
-    test002();
+    // test002();
+
+    test003();
 
     return 0;
+}
+
+void test003() {
+    int x = 10;
+    float f = static_cast<float>(x);
+    cout << "f == " << f << endl;
 }
 
 void test002() {

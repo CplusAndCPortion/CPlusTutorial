@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-using namespace std;
+using namespace std; // 告诉编译器使用std命名空间
 
 
 /**
